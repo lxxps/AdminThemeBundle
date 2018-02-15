@@ -39,5 +39,9 @@ services:
             - "%avanzu_admin_theme.options%"
             - "@avanzu_admin_theme.admin_router"
 
+    # in case automatic discovery fails, register all commands in one declaration :)
+    Avanzu\AdminThemeBundle\Command\:
+        resource: "../../Command/*"
+        tags: [ "console.command" ]
 
 
