@@ -37,7 +37,7 @@ class InitializeCommand extends ContainerAwareCommand
         $this->setName('avanzu:admin:initialize')
             ->addOption('vendor-dir', null, InputOption::VALUE_OPTIONAL, 'path to vendors', 'vendor')
             ->addOption('theme-dir', null, InputOption::VALUE_OPTIONAL, 'path to adminlte', 'almasaeed2010/adminlte')
-            ->addOption('web-dir', null, InputOption::VALUE_OPTIONAL, 'path to web', 'web')
+            ->addOption('web-dir', null, InputOption::VALUE_OPTIONAL, 'path to web', 'public')
             ->addOption('symlink', null, InputOption::VALUE_NONE, 'Symlinks the assets instead of copying it')
             ->addOption('relative', null, InputOption::VALUE_NONE, 'Make relative symlinks')
         ;
