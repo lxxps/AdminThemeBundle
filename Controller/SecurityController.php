@@ -9,7 +9,7 @@ namespace Avanzu\AdminThemeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Security\Core\SecurityContext;
+use Symfony\Component\Security\Core\Security as SecurityContext;
 
 class SecurityController extends Controller
 {
@@ -21,7 +21,7 @@ class SecurityController extends Controller
     public function loginAction(Request $request)
     {
         $session = $request->getSession();
-
+        
         // get the login error if there is one
         if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
             $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
